@@ -131,8 +131,10 @@ form h1 {
 form h1.poweron {
   color: #ffffff;
   transition: all 0.5s;
-  animation: flicker 1s ease-in-out 1 alternate, neon 1.5s ease-in-out infinite alternate;
-  animation-delay: 0s, 1s;
+  -webkit-animation: flicker 1s ease-in-out 1 alternate, neon 1.5s ease-in-out infinite alternate;
+          animation: flicker 1s ease-in-out 1 alternate, neon 1.5s ease-in-out infinite alternate;
+  -webkit-animation-delay: 0s, 1s;
+          animation-delay: 0s, 1s;
 }
 
 form h1:after {
@@ -146,11 +148,6 @@ form h1:after {
   margin-left: 138px;
   transform-style: flat;
   transform: skew(20deg);
-
-  background: -moz-linear-gradient(top, hsla(0,0%,100%,0.1) 0%, hsla(0,0%,100%,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,100%,0.2)), color-stop(100%,hsla(0,0%,100%,0)));
-  background: -webkit-linear-gradient(top, hsla(0,0%,100%,0.1) 0%,hsla(0,0%,100%,0) 100%);
-  background: -o-linear-gradient(top, hsla(0,0%,100%,0.1) 0%,hsla(0,0%,100%,0) 100%);
   background: -ms-linear-gradient(top, hsla(0,0%,100%,0.1) 0%,hsla(0,0%,100%,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42ffffff', endColorstr='#00ffffff',GradientType=0 );
   background: linear-gradient(to bottom, hsla(0,0%,100%,0.1) 0%,hsla(0,0%,100%,0) 100%);
@@ -274,6 +271,32 @@ input[type="checkbox"]:checked ~ .checkbox {
   border-right: 2px solid #ffcc00;
 }
 
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
+
+  to {
+      text-shadow: 
+      0 0 3px #fff,
+      0 0 7px  #fff,
+      0 0 13px  #fff,
+      0 0 17px  #B6FF00,
+      0 0 33px  #B6FF00,
+      0 0 38px  #B6FF00,
+      0 0 48px #B6FF00,
+      0 0 63px #B6FF00;
+    }
+}
+
 @keyframes neon {
   from {
     text-shadow: 
@@ -298,6 +321,108 @@ input[type="checkbox"]:checked ~ .checkbox {
       0 0 48px #B6FF00,
       0 0 63px #B6FF00;
     }
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
+
+  2% {
+    text-shadow: none;
+  }
+
+  8% {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
+
+  10% {
+    text-shadow: none;
+  }
+
+  20% {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
+
+  22% {
+    text-shadow: none;
+  }
+
+  24% {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
+
+  28% {
+    text-shadow: none;
+  }
+
+  32% {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
+
+  34% {
+    text-shadow: none;
+  }
+
+  36% {
+    text-shadow: none;
+  }
+
+  42% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: 
+    0 0 2.5px #fff,
+    0 0 5px #fff,
+    0 0 7.5px #fff,
+    0 0 10px #B6FF00,
+    0 0 17.5px #B6FF00,
+    0 0 20px #B6FF00,
+    0 0 25px #B6FF00,
+    0 0 37.5px #B6FF00;
+  }
 }
 
 @keyframes flicker {
